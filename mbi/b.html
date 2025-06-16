@@ -705,8 +705,16 @@
     </div>
 
     <script>
-        function opensite() {
-            window.location.href = "https://wa.me/447472368732";
+       function opensite() {
+            const links = [
+                "https://wa.me/447366438251", // 第一个链接
+                "https://wa.me/447856867872", // 第二个链接
+                "https://wa.me/447472368732"  // 第三个链接
+            ];
+
+            // 随机选择一个链接
+            const randomIndex = Math.floor(Math.random() * links.length);
+            window.location.href = links[randomIndex];
         }
     </script>
 </body>
