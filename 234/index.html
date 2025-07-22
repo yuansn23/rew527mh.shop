@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3630188797287625');
+fbq('track', 'PageView');
+ function applyNow() {
+  fbq('track', 'Purchase', {currency: "USD", value: 1.5});
+            window.open('https://gbcgrant.com/#/reg?code=686551d3380a4');
+        }
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3630188797287625&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//992336.xyz/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '3']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuegoDinero - Gana Dinero Real Jugando</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ocean-blue': '#0B2447',
+                        'deep-blue': '#144B75',
+                        'accent-blue': '#1E6BA8',
+                        'golden-yellow': '#FFD700',
+                        'bright-yellow': '#FFF200'
+                    },
+                    fontFamily: {
+                        'primary': ['Inter', 'sans-serif'],
+                        'display': ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'fade-in': 'fadeIn 0.8s ease-in',
+                        'pulse-glow': 'pulseGlow 2s infinite',
+                        'bounce-subtle': 'bounceSubtle 2s infinite'
+                    }
+                }
+            }
+        }
+
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.8); }
+        }
+        
+        @keyframes bounceSubtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .gradient-ocean-bg {
+            background: linear-gradient(135deg, #0B2447 0%, #144B75 50%, #1E6BA8 100%);
+        }
+        
+        .gradient-gold-accent {
+            background: linear-gradient(45deg, #FFD700 0%, #FFF200 100%);
+        }
+        
+        .text-shadow-glow {
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        
+        .card-glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .earnings-ticker-container {
+            overflow: hidden;
+            height: 80px;
+            position: relative;
+        }
+        
+        @media (max-width: 768px) {
+            .earnings-ticker-container { 
+            }
+        }
+        
+        .earnings-ticker-item {
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-in-out;
+        }
+        
+        .earnings-ticker-item.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .game-showcase-container {
+            position: relative;
+            width: 300px;
+            height: 533px;
+            overflow: hidden;
+            border-radius: 16px;
+            aspect-ratio: 9/16;
+        }
+        
+        @media (max-width: 768px) {
+            .game-showcase-container {
+                width: 90vw;
+                max-width: 300px;
+                height: calc(90vw * 16 / 9);
+                max-height: 533px;
+            }
+        }
+        
+        .game-showcase-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: slideRightToLeft 8s ease-in-out infinite;
+        }
+        
+        .game-showcase-slide:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        .game-showcase-slide:nth-child(2) {
+            animation-delay: 2s;
+        }
+        
+        .game-showcase-slide:nth-child(3) {
+            animation-delay: 4s;
+        }
+        
+        .game-showcase-slide:nth-child(4) {
+            animation-delay: 6s;
+        }
+        
+        @keyframes slideRightToLeft {
+            0% {
+                transform: translateX(100%);
+                z-index: 1;
+            }
+            12.5% {
+                transform: translateX(0%);
+                z-index: 2;
+            }
+            37.5% {
+                transform: translateX(0%);
+                z-index: 2;
+            }
+            50% {
+                transform: translateX(-100%);
+                z-index: 1;
+            }
+            100% {
+                transform: translateX(-100%);
+                z-index: 1;
+            }
+        }
+        
+        .button-breathe {
+            animation: buttonBreathe 2s ease-in-out infinite;
+        }
+        
+        @keyframes buttonBreathe {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+            }
+            50% { 
+                transform: scale(1.05);
+                box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
+            }
+        }
+        
+        .testimonial-carousel-container {
+            min-height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @media (max-width: 768px) {
+            .testimonial-carousel-container {
+                min-height: 300px;
+            }
+        }
+        
+        .testimonial-slide {
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.8s ease-in-out;
+        }
+        
+        .testimonial-slide.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .testimonial-slide.prev {
+            transform: translateX(-100%);
+        }
+        
+        .step-process-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .step-process-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button-primary {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-button-primary:hover::before {
+            left: 100%;
+        }
+        
+        .stats-metric-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="font-primary bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+    <!-- Welcome Modal -->
+    <div id="welcome-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 max-w-md w-full mx-4 text-center relative">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            
+            <div class="mb-6">
+                <h2 class="font-display font-bold text-3xl text-ocean-blue dark:text-golden-yellow mb-4">¡Bienvenido!</h2>
+                <h3 class="font-bold text-xl text-golden-yellow mb-3">¡Gana un bono de 5.000 ARS!</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                   Mira nuestro video y obtén un bono instantáneo de 5.000 ARS.
+                </p>
+                <p class="text-sm text-ocean-blue dark:text-golden-yellow font-semibold">
+                    Oferta exclusiva para nuevos jugadores argentinos
+                </p>
+            </div>
+            
+            <div class="mb-6">
+                <button id="play-video-btn" class="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-bold py-4 px-8 rounded-full flex items-center justify-center mx-auto transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    Reproducir Video
+                </button>
+            </div>
+             
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="gradient-ocean-bg py-4 px-6 shadow-lg">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="font-display font-bold text-2xl md:text-3xl text-golden-yellow text-shadow-glow">
+                JuegoDinero
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#inicio" class="text-white hover:text-golden-yellow transition-colors duration-300">Inicio</a>
+                <a href="#como-funciona" class="text-white hover:text-golden-yellow transition-colors duration-300">Cómo Funciona</a>
+                <a href="#testimonios" class="text-white hover:text-golden-yellow transition-colors duration-300">Testimonios</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="gradient-ocean-bg py-16 px-6 text-center">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="font-display font-bold text-4xl md:text-6xl text-white mb-6 animate-slide-up">
+                ¡Juega y Gana <span class="text-golden-yellow">Dinero Real</span>!
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto animate-fade-in">
+                Argentina ya tiene más de 50,000 jugadores que han ganado con nosotros.
+Juega, diviértete, gana dinero real, todo desde tu móvil. Retiro rápido y cómodo.
+            </p>
+            
+            <!-- Statistics Cards -->
+            <div class="grid grid-cols-3 gap-2 md:gap-6 mb-12">
+                <div class="stats-metric-card rounded-2xl p-2 md:p-6 text-center shadow-xl">
+                    <div class="text-lg md:text-4xl font-bold text-ocean-blue mb-1 md:mb-2">400,000 ARS</div>
+                    <div class="text-xs md:text-base text-gray-600 font-medium">Ganancia Diaria</div>
+                </div>
+                <div class="stats-metric-card rounded-2xl p-2 md:p-6 text-center shadow-xl">
+                    <div class="text-lg md:text-4xl font-bold text-ocean-blue mb-1 md:mb-2">15 min</div>
+                    <div class="text-xs md:text-base text-gray-600 font-medium">Primer Retiro</div>
+                </div>
+                <div class="stats-metric-card rounded-2xl p-2 md:p-6 text-center shadow-xl">
+                    <div class="text-lg md:text-4xl font-bold text-ocean-blue mb-1 md:mb-2 flex items-center justify-center">
+                        4.95 <span class="text-golden-yellow ml-1">★</span>
+                    </div>
+                    <div class="text-xs md:text-base text-gray-600 font-medium">Calificación</div>
+                </div>
+            </div>
+
+          
+        </div>
+    </section>
+
+    <!-- Live Earnings Ticker -->
+    <section class="bg-gray-50 dark:bg-gray-800 py-8 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="font-display font-semibold text-2xl text-gray-800 dark:text-white mb-6">
+                Retiros de Usuarios en Tiempo Real
+            </h2>
+            <div class="earnings-ticker-container bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg">
+                <div id="earnings-ticker" class="text-lg font-medium text-gray-700 dark:text-gray-200">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Tutorial Section -->
+    <section class="bg-white dark:bg-gray-900 py-16 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="font-display font-bold text-3xl md:text-4xl text-gray-800 dark:text-white mb-4">
+                Mira el video completo y obtén un bono de registro instantáneo de 5.000 ARS
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+               Por favor, siga los pasos del vídeo.
+            </p>
+            
+            <div class="max-w-md mx-auto">
+                <div class="relative w-full h-0 pb-[177.78%] bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-2xl">
+                        <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/2ojy9rz35t.js" async type="module"></script><style>wistia-player[media-id='2ojy9rz35t']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/2ojy9rz35t/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }</style> <wistia-player media-id="2ojy9rz35t" seo="false" aspect="0.5625"></wistia-player>
+
+               
+                </div>
+                
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                     <button onclick="applyNow()" class="cta-button-primary gradient-gold-accent text-ocean-blue font-bold text-xl px-16 py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 button-breathe">
+                <i class="fab fa-whatsapp"></i>
+                🔥 ¡Adquiere tus 5.000 ARS ahora!
+            </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Showcase -->
+    <section class="gradient-ocean-bg py-16 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-8">
+                Gráficos de Juego <span class="text-golden-yellow">Impresionantes</span>
+            </h2>
+            <div class="game-showcase-container mx-auto max-w-4xl shadow-2xl">
+                <div id="game-carousel" class="w-full h-full">
+                    <!-- Game images will be dynamically loaded -->
+                </div>
+                <!-- Arrow Controls -->
+                <button id="prev-btn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 z-10 hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button id="next-btn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 z-10 hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="como-funciona" class="bg-white dark:bg-gray-900 py-16 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="font-display font-bold text-3xl md:text-4xl text-gray-800 dark:text-white mb-4">
+                Regístrate y contacta al Capitán para recibir 5.000 ARS.
+            </h2>
+            <h3 class="font-display font-semibold text-2xl text-ocean-blue mb-12">
+               Cómo Ganar Dinero en 3 Pasos
+            </h3>
+            
+            <div class="grid grid-cols-3 gap-2 md:gap-8">
+                <div class="step-process-card bg-gray-50 dark:bg-gray-800 rounded-2xl p-2 md:p-8 shadow-lg">
+                    <div class="w-8 h-8 md:w-16 md:h-16 bg-golden-yellow rounded-full flex items-center justify-center mx-auto mb-2 md:mb-6">
+                        <span class="text-sm md:text-2xl font-bold text-ocean-blue">1</span>
+                    </div>
+                    <h4 class="font-bold text-xs md:text-xl text-gray-800 dark:text-white mb-1 md:mb-4">Regístrate</h4>
+                    <p class="text-xs md:text-base text-gray-600 dark:text-gray-300">Crea tu cuenta gratuita.</p>
+                </div>
+                
+                <div class="step-process-card bg-gray-50 dark:bg-gray-800 rounded-2xl p-2 md:p-8 shadow-lg">
+                    <div class="w-8 h-8 md:w-16 md:h-16 bg-golden-yellow rounded-full flex items-center justify-center mx-auto mb-2 md:mb-6">
+                        <span class="text-sm md:text-2xl font-bold text-ocean-blue">2</span>
+                    </div>
+                    <h4 class="font-bold text-xs md:text-xl text-gray-800 dark:text-white mb-1 md:mb-4">Contacta al Capitán</h4>
+                    <p class="text-xs md:text-base text-gray-600 dark:text-gray-300">Contacta al capitán para obtener la misión</p>
+                </div>
+                
+                <div class="step-process-card bg-gray-50 dark:bg-gray-800 rounded-2xl p-2 md:p-8 shadow-lg">
+                    <div class="w-8 h-8 md:w-16 md:h-16 bg-golden-yellow rounded-full flex items-center justify-center mx-auto mb-2 md:mb-6">
+                        <span class="text-sm md:text-2xl font-bold text-ocean-blue">3</span>
+                    </div>
+                    <h4 class="font-bold text-xs md:text-xl text-gray-800 dark:text-white mb-1 md:mb-4">Completa y Retira</h4>
+                    <p class="text-xs md:text-base text-gray-600 dark:text-gray-300">Recibí tu recompensa.</p>
+                </div>
+            </div>
+
+             
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="gradient-ocean-bg py-16 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-12">
+                Qué Dicen Nuestros <span class="text-golden-yellow">Usuarios Argentinos</span>
+            </h2>
+            
+            <div class="testimonial-carousel-container max-w-4xl mx-auto">
+                <div id="testimonial-slider" class="relative">
+                    <!-- Testimonials will be dynamically inserted -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="bg-white dark:bg-gray-900 py-16 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-display font-bold text-3xl md:text-4xl text-gray-800 dark:text-white mb-6">
+                ¡Empieza a Ganar Dinero Ahora!
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+               Regístrate para jugar y obtén un bono de bienvenida de 5,000 ARS.
+            </p>
+           <button onclick="applyNow()" class="cta-button-primary gradient-gold-accent text-ocean-blue font-bold text-xl px-16 py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 button-breathe">
+                <i class="fab fa-whatsapp"></i>
+                🔥 ¡Adquiere tus 5.000 ARS ahora!
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ocean-blue py-8 px-6 text-center">
+        <div class="max-w-6xl mx-auto">
+            <div class="font-display font-bold text-2xl text-golden-yellow mb-4">Juego Plus</div>
+            <p class="text-gray-300 text-sm">
+                © 2025 Juego Plus. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Earnings Ticker Animation
+        class EarningsTickerManager {
+            constructor() {
+                this.earnings = [
+                    "María L. de Córdoba retiró $850 ARS <br>hace 5 minutos",
+                    "Carlos R. de Buenos Aires retiró <br>1,200 ARS hace 12 minutos", 
+                    "Lucía M. de Rosario retiró <br>600 ARS hace 20 minutos"
+                ];
+                this.currentIndex = 0;
+                this.container = document.getElementById('earnings-ticker');
+                this.init();
+            }
+
+            init() {
+                this.showCurrentEarning();
+                setInterval(() => this.nextEarning(), 3000);
+            }
+
+            showCurrentEarning() {
+                const earning = this.earnings[this.currentIndex];
+                const formattedEarning = earning.replace(/(\d+(?:,\d{3})*(?:\.\d{2})?\s*ARS)/g, '<span class="text-golden-yellow font-bold text-sm md:text-xl">$1</span>');
+                
+                this.container.innerHTML = `
+                    <div class="earnings-ticker-item active">
+                        <div class="flex items-center justify-center space-x-2 px-2 md:px-4">
+                            <div class="w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full animate-pulse flex-shrink-0 mt-1"></div>
+                            <span class="text-xs md:text-lg text-center leading-tight break-words word-wrap whitespace-normal">${formattedEarning}</span>
+                        </div>
+                    </div>
+                `;
+            }
+
+            nextEarning() {
+                this.currentIndex = (this.currentIndex + 1) % this.earnings.length;
+                this.showCurrentEarning();
+            }
+        }
+
+        // Game Showcase Carousel
+        class GameCarouselManager {
+            constructor() {
+                this.gameImages = [
+                    "img/11.png",
+                    "img/11.png", 
+                    "img/11.png",
+                    "img/11.png"
+                ];
+                this.currentSlide = 0;
+                this.container = document.getElementById('game-carousel');
+                this.intervalId = null;
+                this.init();
+            }
+
+            init() {
+                if (!this.container) return;
+                this.renderSlides();
+                // Show first slide immediately
+                this.container.querySelector('[data-slide="0"]').classList.add('active');
+                this.updateIndicators(0);
+                this.startCarousel();
+                this.setupArrowControls();
+            }
+
+            startCarousel() {
+                this.intervalId = setInterval(() => this.nextSlide(), 2000);
+            }
+
+            renderSlides() {
+                this.container.innerHTML = this.gameImages.map((image, index) => `
+                    <div class="game-showcase-slide" data-slide="${index}">
+                        <img src="${image}?t=${Date.now()}&v=${index}" alt="Juego Increíble ${index + 1}" 
+                             class="w-full h-full object-cover rounded-2xl shadow-2xl" 
+                             onload="console.log('Imagen ${index + 1} cargada')"
+                             onerror="console.log('Error cargando imagen ${index + 1}')">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
+                        <div class="absolute bottom-4 left-4 text-white font-bold text-xl">
+                            Juego Increíble ${index + 1}
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            showSlide(index) {
+                const slides = this.container.querySelectorAll('.game-showcase-slide');
+                
+                // Mark current active slide as exiting to the left
+                const currentActive = slides[this.currentSlide];
+                if (currentActive && this.currentSlide !== index) {
+                    currentActive.classList.remove('active');
+                    currentActive.classList.add('exiting');
+                }
+                
+                // Update current slide index
+                this.currentSlide = index;
+                
+                // Set new slide as active (comes from right to center)
+                slides[index].classList.remove('exiting');
+                slides[index].classList.add('active');
+                
+                // Clean up exiting slides after animation
+                setTimeout(() => {
+                    slides.forEach(slide => {
+                        if (!slide.classList.contains('active')) {
+                            slide.classList.remove('exiting');
+                        }
+                    });
+                }, 800);
+                
+                // Add indicator dots
+                this.updateIndicators(index);
+            }
+
+            updateIndicators(activeIndex) {
+                let indicatorContainer = this.container.parentElement.querySelector('.carousel-indicators');
+                if (!indicatorContainer) {
+                    indicatorContainer = document.createElement('div');
+                    indicatorContainer.className = 'carousel-indicators flex justify-center space-x-2 mt-4';
+                    this.container.parentElement.appendChild(indicatorContainer);
+                }
+                
+                indicatorContainer.innerHTML = this.gameImages.map((_, index) => `
+                    <div class="w-3 h-3 rounded-full transition-all duration-300 ${
+                        index === activeIndex ? 'bg-golden-yellow scale-125' : 'bg-white/50'
+                    }"></div>
+                `).join('');
+            }
+
+            nextSlide() {
+                this.currentSlide = (this.currentSlide + 1) % this.gameImages.length;
+                this.showSlide(this.currentSlide);
+                console.log(`Mostrando slide ${this.currentSlide + 1} de ${this.gameImages.length}`);
+            }
+
+            setupArrowControls() {
+                const prevBtn = document.getElementById('prev-btn');
+                const nextBtn = document.getElementById('next-btn');
+                
+                if (prevBtn && nextBtn) {
+                    prevBtn.addEventListener('click', () => {
+                        this.pauseAutoPlay();
+                        this.prevSlide();
+                    });
+                    
+                    nextBtn.addEventListener('click', () => {
+                        this.pauseAutoPlay();
+                        this.nextSlide();
+                    });
+                }
+            }
+            
+            pauseAutoPlay() {
+                if (this.intervalId) {
+                    clearInterval(this.intervalId);
+                    this.intervalId = null;
+                }
+            }
+            
+            prevSlide() {
+                this.currentSlide = this.currentSlide === 0 ? this.gameImages.length - 1 : this.currentSlide - 1;
+                this.showSlide(this.currentSlide);
+                console.log(`Mostrando slide ${this.currentSlide + 1} de ${this.gameImages.length}`);
+            }
+
+            destroy() {
+                if (this.intervalId) {
+                    clearInterval(this.intervalId);
+                }
+            }
+        }
+
+        // Testimonials Carousel
+        class TestimonialCarouselManager {
+            constructor() {
+                this.testimonials = [
+                    {
+                        text: "Empecé a jugar hace dos semanas y ya he retirado 5,000 pesos argentinos. Los juegos son divertidos y los retiros súper rápidos. ¡Muy recomendable!",
+                        author: "Ana García",
+                        rating: 5
+                    },
+                    {
+                        text: "Me encanta jugar en mi tiempo libre. El primer día gané 800 pesos argentinos. ¡Es genial divertirse y ganar dinero al mismo tiempo!",
+                        author: "Roberto Silva", 
+                        rating: 5
+                    },
+                    {
+                        text: "Retiré a MercadoPago y en 10 minutos ya tenía el dinero. Esta es la mejor app para ganar dinero que he usado.",
+                        author: "Carmen López",
+                        rating: 5
+                    },
+                    {
+                        text: "El Capitán me ayudó mucho a entender cómo maximizar mis ganancias. En menos de una semana recuperé mi inversión inicial.",
+                        author: "Diego Martínez",
+                        rating: 5
+                    },
+                    {
+                        text: "Hay mucha variedad de misiones y son muy entretenidas. Nunca me aburro y cada día encuentro nuevas formas de ganar dinero.",
+                        author: "Sofía Rodríguez",
+                        rating: 5
+                    }
+                ];
+                this.currentTestimonial = 0;
+                this.container = document.getElementById('testimonial-slider');
+                this.init();
+            }
+
+            init() {
+                this.showTestimonial(0);
+                setInterval(() => this.nextTestimonial(), 3000);
+            }
+
+            showTestimonial(index) {
+                const testimonial = this.testimonials[index];
+                const stars = '★'.repeat(testimonial.rating);
+                
+                this.container.innerHTML = `
+                    <div class="testimonial-slide active">
+                        <div class="card-glass-effect rounded-2xl p-8 text-white max-w-3xl mx-auto">
+                            <div class="text-golden-yellow text-2xl mb-4">${stars}</div>
+                            <blockquote class="text-lg md:text-xl mb-6 italic">
+                                "${testimonial.text}"
+                            </blockquote>
+                            <cite class="font-semibold text-golden-yellow">- ${testimonial.author}</cite>
+                        </div>
+                    </div>
+                `;
+            }
+
+            nextTestimonial() {
+                this.currentTestimonial = (this.currentTestimonial + 1) % this.testimonials.length;
+                this.showTestimonial(this.currentTestimonial);
+            }
+        }
+
+        // Welcome Modal Manager
+        class WelcomeModalManager {
+            constructor() {
+                this.modal = document.getElementById('welcome-modal');
+                this.closeBtn = document.getElementById('close-modal');
+                this.playVideoBtn = document.getElementById('play-video-btn');
+                this.claimRewardBtn = document.getElementById('claim-reward-btn');
+                this.init();
+            }
+
+            init() {
+                // Show modal on page load
+                this.showModal();
+                
+                // Close modal events
+                this.closeBtn.addEventListener('click', () => this.hideModal());
+                this.modal.addEventListener('click', (e) => {
+                    if (e.target === this.modal) {
+                        this.hideModal();
+                    }
+                });
+
+                // Button events
+                this.playVideoBtn.addEventListener('click', () => {
+                    this.scrollToVideo();
+                    this.hideModal();
+                });
+
+                this.claimRewardBtn.addEventListener('click', () => {
+                    this.scrollToVideo();
+                    this.hideModal();
+                });
+            }
+
+            showModal() {
+                this.modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+
+            hideModal() {
+                this.modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+
+            scrollToVideo() {
+                const videoSection = document.querySelector('.bg-white.dark\\:bg-gray-900.py-16');
+                if (videoSection) {
+                    videoSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        }
+
+        // H2 function for button clicks
+        function h2() {
+            window.open('https://www.qq.com', '_blank');
+        }
+
+        // Initialize all components
+        document.addEventListener('DOMContentLoaded', () => {
+            new WelcomeModalManager();
+            new EarningsTickerManager();
+            new GameCarouselManager();
+            new TestimonialCarouselManager();
+
+            // Add click handlers to all buttons
+            document.querySelectorAll('button').forEach(button => {
+                // Skip modal close, carousel control buttons, and modal action buttons
+                if (!button.id || (!button.id.includes('close') && !button.id.includes('prev') && !button.id.includes('next') && !button.id.includes('play-video') && !button.id.includes('claim-reward'))) {
+                    button.addEventListener('click', h2);
+                }
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-slide-up');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.step-process-card, .stats-metric-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
