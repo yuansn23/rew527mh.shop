@@ -1,6 +1,34 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16683941383"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16683941383');
+</script>
+
+    <!-- Event snippet for 韩-朴 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16683941383/Z9fGCOSe-fwaEIf8wpM-',
+      'transaction_id': '',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>박순혁 투자 커뮤니티 - 무료 주식 투자 가이드</title>
@@ -435,7 +463,7 @@
 
         // Action button function
         function r2() {
-            window.open('https://band.us/', '_blank');
+           gtag_report_conversion('https://lihi.cc/ZpsSz');
         }
     </script>
 
